@@ -7,11 +7,10 @@ function Player(props) {
         {firstName} <span>"{gamerTag}"</span> {lastName}
       </h1>
 
-      {!wins && <h2 className="zero">Currently with no wins :(</h2>}
-
-      {wins === 1 && <h2>Currently at 1 win</h2>}
-
-      {wins > 1 && <h2>Currently at 1+ wins</h2>}
+      {(() => {
+        if (!wins) return <h2 className="zero">Currently with no wins :(</h2>;
+        return <h2>Currently at {wins} win{wins > 1 ? 's' : ''}</h2>;
+      })()}
     </article>
   );
 };
