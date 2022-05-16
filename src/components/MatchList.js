@@ -1,7 +1,7 @@
 import { Match } from '../index';
 
-const MatchList = (props) => {
-  const matches = props.matchData.map((match) => <Match key={match.matchNumber} {...match} />);
+const MatchList = ({matchData}) => {
+  const matches = matchData.map((match) => <Match key={match.matchNumber} {...match} />);
 
   return (
     <section className="MatchList">
