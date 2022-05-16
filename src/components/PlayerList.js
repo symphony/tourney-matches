@@ -1,9 +1,9 @@
 import { preparePlayerData, addWinsToPlayers } from '../helpers/playerHelpers';
 import { Player } from '../index';
 
-function PlayerList(props) {
-  const players = preparePlayerData(props.playerData);
-  const parsedPlayerData = addWinsToPlayers(players, props.matchData);
+const PlayerList = ({ playerData, matchData }) => {
+  const players = preparePlayerData(playerData);
+  const parsedPlayerData = addWinsToPlayers(players, matchData);
 
   const playersSection = parsedPlayerData.map((player) => <Player key={player.gamerTag} {...player} />);
 

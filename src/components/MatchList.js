@@ -1,6 +1,6 @@
 import { Match } from '../index';
 
-function MatchList(props) {
+const MatchList = (props) => {
   const matches = props.matchData.map((match) => <Match key={match.matchNumber} {...match} />);
 
   return (
