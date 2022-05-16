@@ -5,7 +5,7 @@ function PlayerList(props) {
   const players = preparePlayerData(props.playerData);
   const parsedPlayerData = addWinsToPlayers(players, props.matchData);
 
-  const playersSection = parsedPlayerData.map((player) => <Player {...player} />);
+  const playersSection = parsedPlayerData.map((player) => <Player key={player.gamerTag} {...player} />);
 
   return (
     <section className="PlayerList">

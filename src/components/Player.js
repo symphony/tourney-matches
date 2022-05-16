@@ -2,7 +2,7 @@ function Player(props) {
   const { firstName, lastName, gamerTag, wins } = props;
 
   return (
-    <article className="Player" key={gamerTag}>
+    <article className="Player">
       <h1>
         {firstName} <span>"{gamerTag}"</span> {lastName}
       </h1>
