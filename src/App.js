@@ -1,25 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import { PlayerList, MatchList, playerData, matchData } from './index';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>
+        Tourney Matches <span>Where Coding and Tournaments found their Match!</span>
+      </h1>
+
+      <PlayerList playerData={playerData} matchData={matchData} />
+      <MatchList matchData={matchData} />
     </div>
   );
-}
+};
 
 export default App;
